@@ -1,0 +1,8 @@
+<span class='glyphicon' [class.glyphicon-star]='isSelected' [class.glyphicon-star-empty]='!isSelected' (click)='onClick()'>
+
+</span>
+<div (click)='onClick()'>
+    <h1 *ngIf='isSelected'>Hello World </h1>
+    <h1 *ngIf='!isSelected'>Pune City</h1>
+
+</div>

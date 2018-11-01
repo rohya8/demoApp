@@ -11,11 +11,18 @@ export class AppComponent {
   fullname;
   namelist = [];
 
+  post = { isSelected: 'true' };
+
 
   onClickAdd() {
     console.log('In method');
     // this.fname = 'World';
     this.fullname = this.fname + ' ' + this.lname;
     this.namelist.push(this.fullname);
+  }
+
+  onComponentApiClick(isSelected) {
+    // console.log('In AppComponent');
+    console.log('In AppComponent : ' + isSelected);       // Passing value
   }
 }
