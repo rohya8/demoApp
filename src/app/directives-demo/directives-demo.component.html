@@ -2,7 +2,7 @@
   directives-demo !
 </p>
 
-<div *ngIf='numbersList.length > 0; then numberList else noNumbers'>
+<div *ngIf='numbersList; then numberList else noNumbers'>
 </div>
 <ng-template #numberList>
   List is not empty !
@@ -13,9 +13,15 @@
 </ng-template>
 
 <p> Ng For directive</p>
+<span *ngIf='!numbersList'>
+<button  (click)="loadCourses()">Load Course</button>
+</span>
+
 <button (click)="onAdd()">Add</button>
-<ul *ngFor='let item of numbersList; index as i'>
+<span *ngIf='numbersList'>
+<ul  *ngFor='let item of numbersList; index as i; trackBy: trackNumberList ' >
   <li>{{i}} = {{item.name}}
     <button (click)='onRemove(item)'>Remove</button>
   </li>
 </ul>
+</span>
