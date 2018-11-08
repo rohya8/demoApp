@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ComponentsAndPropertyBindingComponent } from './components-and-property-binding/components-and-property-binding.component';
 import { TypescriptDemoComponent } from './typescript-demo/typescript-demo.component';
 import { ComponentapiInputOutputComponent } from './componentapi-input-output/componentapi-input-output.component';
+import { DirectivesDemoComponent } from './directives-demo/directives-demo.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ComponentapiInputOutputComponent } from './componentapi-input-output/co
     AppComponent,
     ComponentsAndPropertyBindingComponent,
     TypescriptDemoComponent,
-    ComponentapiInputOutputComponent
+    ComponentapiInputOutputComponent,
+    DirectivesDemoComponent
   ],
   imports: [
     BrowserModule, FormsModule

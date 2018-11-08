@@ -1,0 +1,21 @@
+<p>
+  directives-demo !
+</p>
+
+<div *ngIf='numbersList.length > 0; then numberList else noNumbers'>
+</div>
+<ng-template #numberList>
+  List is not empty !
+</ng-template>
+
+<ng-template #noNumbers>
+  List is empty !
+</ng-template>
+
+<p> Ng For directive</p>
+<button (click)="onAdd()">Add</button>
+<ul *ngFor='let item of numbersList; index as i'>
+  <li>{{i}} = {{item.name}}
+    <button (click)='onRemove(item)'>Remove</button>
+  </li>
+</ul>
