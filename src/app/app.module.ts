@@ -7,6 +7,7 @@ import { ComponentsAndPropertyBindingComponent } from './components-and-property
 import { TypescriptDemoComponent } from './typescript-demo/typescript-demo.component';
 import { ComponentapiInputOutputComponent } from './componentapi-input-output/componentapi-input-output.component';
 import { DirectivesDemoComponent } from './directives-demo/directives-demo.component';
+import { RoutingAndNavigationComponent } from './routing-and-navigation/routing-and-navigation.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DirectivesDemoComponent } from './directives-demo/directives-demo.compo
     ComponentsAndPropertyBindingComponent,
     TypescriptDemoComponent,
     ComponentapiInputOutputComponent,
-    DirectivesDemoComponent
+    DirectivesDemoComponent,
+    RoutingAndNavigationComponent
   ],
   imports: [
     BrowserModule, FormsModule
