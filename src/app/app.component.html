@@ -5,5 +5,11 @@
 
 
  <app-componentapi-input-output [isSelected]='post.isSelected' (change)='onComponentApiClick($event)'></app-componentapi-input-output> -->
+ <nav>
+    <a routerLink="/directives" routerLinkActive="active">Directives Demo</a>
+    <a routerLink="/routing" routerLinkActive="active">Routing and Navigation</a>
+  </nav>
+ <router-outlet></router-outlet>
 
- <app-directives-demo></app-directives-demo>
+ <!-- <app-directives-demo></app-directives-demo>
+ -->

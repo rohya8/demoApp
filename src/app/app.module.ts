@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -9,6 +10,10 @@ import { ComponentapiInputOutputComponent } from './componentapi-input-output/co
 import { DirectivesDemoComponent } from './directives-demo/directives-demo.component';
 import { RoutingAndNavigationComponent } from './routing-and-navigation/routing-and-navigation.component';
 
+const routes: Routes = [
+  { path: 'directives', component: DirectivesDemoComponent },
+  { path: 'routing', component: RoutingAndNavigationComponent }
+];
 
 @NgModule({
   declarations: [
@@ -17,10 +22,11 @@ import { RoutingAndNavigationComponent } from './routing-and-navigation/routing-
     TypescriptDemoComponent,
     ComponentapiInputOutputComponent,
     DirectivesDemoComponent,
-    RoutingAndNavigationComponent
+    RoutingAndNavigationComponent,
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

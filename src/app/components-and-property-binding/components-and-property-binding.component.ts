@@ -7,11 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ComponentsAndPropertyBindingComponent implements OnInit {
 
-    // property binding
-    name1 = 'Tom' ;
-    @Input() name2;
-    @Input() name3;
-  
+  // property binding
+  name1 = 'Tom';
+  @Input() name2;
+  @Input() name3;
+
 
   constructor() { }
 
