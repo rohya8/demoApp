@@ -9,10 +9,16 @@ import { TypescriptDemoComponent } from './typescript-demo/typescript-demo.compo
 import { ComponentapiInputOutputComponent } from './componentapi-input-output/componentapi-input-output.component';
 import { DirectivesDemoComponent } from './directives-demo/directives-demo.component';
 import { RoutingAndNavigationComponent } from './routing-and-navigation/routing-and-navigation.component';
+import { ConsumeHttpServicesComponent } from './consume-http-services/consume-http-services.component';
+import { PostService } from './consume-http-services/post-service.service';
+import { HttpModule } from '@angular/http';
 
 const routes: Routes = [
   { path: 'directives', component: DirectivesDemoComponent },
-  { path: 'routing', component: RoutingAndNavigationComponent }
+  { path: 'routing', component: RoutingAndNavigationComponent },
+  { path: 'consumeservices', component: ConsumeHttpServicesComponent },
+  { path: '**', component: RoutingAndNavigationComponent },
+
 ];
 
 @NgModule({
@@ -23,12 +29,14 @@ const routes: Routes = [
     ComponentapiInputOutputComponent,
     DirectivesDemoComponent,
     RoutingAndNavigationComponent,
+    ConsumeHttpServicesComponent
   ],
   imports: [
     BrowserModule, FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,6 +14,7 @@ export class AppComponent {
   post = { isSelected: 'true' };
 
 
+
   onClickAdd() {
     console.log('In method');
     // this.fname = 'World';

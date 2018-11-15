@@ -1,0 +1,12 @@
+<p>
+  consume-http-services works!
+</p>
+<input type="text" #inputPost (keyup.enter)="addPostData(inputPost)" class="form-control">
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of posts">
+    <button (click)="updatePostData(item)">Update</button>
+    <button (click) = "deletePostData(item)">Delete</button>
+    {{item.title}} 
+    
+  </li>
+</ul>
